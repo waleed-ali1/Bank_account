@@ -1,8 +1,8 @@
 # Bank_account
 
 
-This is my first real try to do a complete project ON gitub
-it's like a bank account where two people can access it :
+This is my first real try to do a complete project ON gitub with PYTHON
+it's a System account where two people can access it :
 1- Admin
 2- Client
 
