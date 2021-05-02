@@ -3,7 +3,6 @@ data = [
     {'ID' : 200, 'Password' : 'ZiadAli1', 'name': 'Ziad Ali' , 'AccountBalance': 2000}
 ]
 
-
 menu_option = """
 ====================
 1. Login as Client
@@ -25,3 +24,17 @@ while program_is_running:
     else:
         print()
         print('please choose a valid option')    
+
+
+
+def Client_log():
+    print(' Enter  your ID ', end=" ")
+    id = int(input())
+    print(" Enter your password ", end="")
+    password = input()
+    display(id,password)
+
+
+#def display(id_c , password):
+
+
