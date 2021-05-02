@@ -36,5 +36,49 @@ def Client_log():
 
 
 #def display(id_c , password):
+def display(id_c , password):
+
+    
+    for info in data:
+        if info['ID'] == id_c and info['Password']== password:
+            print()
+            print(str.format(' Welome dear Client {} your Current Balance Accnount is {}', info['name'],info['AccountBalance']))
+            Running = True
+            while Running:
+                print()
+                print("1. Add Money to your Balance Account")
+                print("2. Take Money from your Balance Account")                
+                print("3. Exit your account ")
+                print()
+                print(" Please choose a task ")
+                decision = int(input())
+                if decision == 1:
+                    print(" Enter the amount of money you want to add")
+                    add = int(input())
+                    info['AccountBalance'] = add + info['AccountBalance']
+                    print(str.format(' Your new Balance is {}',info['AccountBalance']))
+                    print()
+                elif decision == 2:
+                    print(" Enter the amount of money you want to Take ")
+                    sub = int(input())
+                    new_balance = info['AccountBalance'] - sub
+                    if new_balance >=0 :
+                        info['AccountBalance']= new_balance
+                        print(str.format(' Your new Balance is {}',info['AccountBalance']))
+                    else: 
+                        print(" You don't have this much to take ")
+                elif decision == 3:
+                    program_is_running = False
+                    break   
+                else:
+                    print()
+                    print(('please choose a valid option'))    
+            break 
+    
+    if info['ID']!= id_c or info['Password'] != password:
+        print()
+        print(" Can't login Wrong informations ") 
+    return True      
+
 
 
