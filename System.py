@@ -75,7 +75,7 @@ while program_is_running:
     decision = int(input(menu_option))
     if decision == 1:
         Client_login()
-    if decision == 2:
+    elif decision == 2:
         Admin_login()
     elif decision == 3:
         program_is_running = False
